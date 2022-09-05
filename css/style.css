@@ -1436,8 +1436,14 @@ body {
   z-index: 51;
   bottom: 73px;
   right: 205px;
-  top: 0;
-  left: 0;
+}
+@media (max-width: 767.98px) {
+  #call {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .accept {
