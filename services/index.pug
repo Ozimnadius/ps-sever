@@ -1,0 +1,15 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Наши услуги'
+
+block content
+    main.page
+        section.page__section.margin-top-50
+            .container
+                .page__title.title= title
+        //-SERVICES
+        section.page__section
+            .container
+                .page__component
+                    include ../src/components/services/index

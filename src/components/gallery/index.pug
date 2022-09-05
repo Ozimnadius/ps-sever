@@ -1,0 +1,20 @@
+.gallery
+    if data.top
+        .gallery__top
+            .gallery__title.title КОЛЛЕКЦИЯ
+            a(href="/gallery/").gallery__link.link
+                span ПОСМОТРЕТЬ ВСЮ КОЛЛЕКЦИЮ
+                <svg width="71" height="16" viewBox="0 0 71 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M70.7071 8.70711C71.0976 8.31658 71.0976 7.68342 70.7071 7.29289L64.3431 0.928932C63.9526 0.538408 63.3195 0.538408 62.9289 0.928932C62.5384 1.31946 62.5384 1.95262 62.9289 2.34315L68.5858 8L62.9289 13.6569C62.5384 14.0474 62.5384 14.6805 62.9289 15.0711C63.3195 15.4616 63.9526 15.4616 64.3431 15.0711L70.7071 8.70711ZM70 7H0V9H70V7Z" fill="black"/>
+                </svg>
+    .gallery__bottom
+        .gallery__grid
+            each i in data.items
+                .gallery__size
+                .gallery__gutter
+                a(href=i.img
+                    data-fancybox="gallery"
+                    data-caption="Композиция представляет собой связку щитов, на которых изображены лики знаменитых исторических личностей, а с обратной стороны запечатлены вехи становления государственности."
+                    data-packed).gallery__item
+                    img(src=i.img alt="My caption")
+

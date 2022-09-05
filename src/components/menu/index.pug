@@ -1,0 +1,8 @@
+.menu
+    button(type='button' data-event='closeMenu').menu__close
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.01297 0.399999H2.54297L6.12497 5.386L9.68897 0.399999H11.255L6.95297 6.448L11.597 13H10.031L6.12497 7.582L2.21897 13H0.688969L5.31497 6.502L1.01297 0.399999Z" fill="black"/>
+        </svg>
+    .menu__items
+        each i in GLOBALS.menu
+            a(href=i.href).menu__item= i.title

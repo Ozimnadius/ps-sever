@@ -1,0 +1,54 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Наши работы'
+
+block content
+    main.page
+        section.page__section.margin-top-50
+            .container
+                .page__title.title= title
+        //-GALLERY
+        section.page__section
+            .container
+                -
+                    var data = {
+                        top: false,
+                        items: [
+                            {
+                                img: '/images/content/gallery/1.png'
+                            },
+                            {
+                                img: '/images/content/gallery/2.png'
+                            },
+                            {
+                                img: '/images/content/gallery/3.png'
+                            },
+                            {
+                                img: '/images/content/gallery/4.png'
+                            },
+                            {
+                                img: '/images/content/gallery/5.png'
+                            },
+                            {
+                                img: '/images/content/gallery/6.png'
+                            },
+                            {
+                                img: '/images/content/gallery/7.png'
+                            },
+                            {
+                                img: '/images/content/gallery/8.png'
+                            },
+                            {
+                                img: '/images/content/gallery/9.png'
+                            },
+                            {
+                                img: '/images/content/gallery/10.png'
+                            },
+                            {
+                                img: '/images/content/gallery/11.png'
+                            },
+
+                        ]
+                    };
+                include ../src/components/gallery/index

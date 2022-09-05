@@ -1,0 +1,125 @@
+.form{
+  width: 401px;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  display: none;
+  position: relative;
+  @media (max-width: 767.98px){
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  &.active{
+    display: block;
+  }
+
+  &.ok{
+    &:after{
+      display: flex;
+    }
+  }
+
+  &:after{
+    content: 'Спасибо мы скоро свяжемся с Вами!';
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-blue);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: var(--color-bg);
+  }
+
+  &__top{
+    background-color: var(--color-blue);
+    padding: 50px 35px;
+    color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title{
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__close{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    top: 35px;
+    right: 15px;
+  }
+
+  &__bottom{
+    padding: 30px 30px 45px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__txt{
+    margin-bottom: 10px;
+  }
+
+  &__fields{
+    display:grid;
+    gap: 40px;
+    margin-bottom: 35px;
+  }
+
+  &__accept{
+    margin-bottom: 20px;
+  }
+
+  &__submit{
+    align-self: flex-end;
+    display: inline-flex;
+    padding: 8px 15px;
+    height: 40px;
+    border-radius: 23px;
+    background-color: var(--color-blue);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: var(--color-bg);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:disabled{
+      background-color: var(--color-gray);
+    }
+  }
+
+}
+
+.input{
+  border: 1px solid transparent;
+  border-bottom-color: #d9d9d9;
+  padding: 5px 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+#call{
+  position: fixed;
+  z-index: 51;
+  bottom: 73px;
+  right: 205px;
+  top: 0;
+  left: 0;
+}

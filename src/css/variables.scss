@@ -1,0 +1,23 @@
+:root{
+  --font: 'Montserrat', Arial, sans-serif;
+  --font-size: 18px;
+  --font-weight: 400;
+  --line-height: 1.22;
+
+  --container-width: 1380px;
+  --container-padding: 0 20px;
+
+  --color-text: #000000;
+  --color-bg: #ffffff;
+  --color-yellow: #e4a763;
+  --color-blue: #527ceb;
+  --color-gray: #a9a8a8;
+  --color-dark: #454545;
+
+  --transition: 0.4s;
+  --margin-segment: 10px;
+  @media (max-width: 767.98px){
+    --margin-segment: 5px;
+    --font-size: 16px;
+  }
+}

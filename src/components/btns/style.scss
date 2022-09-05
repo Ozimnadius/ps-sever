@@ -1,0 +1,66 @@
+.btns {
+  position: fixed;
+  z-index: 50;
+  bottom: 70px;
+  right: 200px;
+  @media (max-width: 767.98px){
+    bottom: 10px;
+    right: 10px;
+  }
+
+
+  &__up {
+    position: absolute;
+    bottom: calc(100% + 90px);
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--color-gray);
+    font-size: 14px;
+    text-transform: uppercase;
+    transform: translateX(-50%) rotate(-90deg);
+    cursor: pointer;
+    padding: 15px;
+    @include tr;
+    @media (max-width: 767.98px){
+      font-size: 0;
+      bottom: -5px;
+      left: -60px;
+      transform: translateX(0) rotate(-90deg);;
+    }
+
+    &:hover {
+      color: var(--color-yellow);
+    }
+
+    svg {
+      max-width: initial;
+
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__call {
+    width: 48px;
+    height: 48px;
+
+    background-color: var(--color-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    cursor: pointer;
+    @include tr;
+
+    &:hover {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

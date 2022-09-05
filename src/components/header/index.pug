@@ -1,0 +1,42 @@
+header.header
+    .container
+        .header__grid
+            .header__left
+                .header__logo
+                    a(href='/')
+                        img(src="/images/content/logo.png" alt="lorem")
+                .header__desc Официальные представители Минского скульптурного комбината Белорусского союза художников в России!
+            .header__right
+                .header__contacts
+                    .header__contact
+                        a(href=GLOBALS.tel.href).link
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_301_17)">
+                            <path d="M10.6816 15.8507L13.4759 13.0579L18.0948 16.28L17.0585 17.3157C16.3677 18.0062 15.3536 18.2629 14.4192 17.984C11.5584 17.1298 8.9899 15.563 6.70925 13.288C4.43747 11.0042 2.8698 8.4371 2.01511 5.57789C1.73612 4.644 1.99297 3.63044 2.6838 2.93999L3.72006 1.9043L6.94396 6.52063L4.14519 9.31788" stroke="black" stroke-width="2" stroke-miterlimit="8" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_301_17">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            span= GLOBALS.tel.txt
+                    .header__contact
+                        a(href=GLOBALS.email.href).link.link--underline
+                            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_301_19)">
+                            <path d="M23.4284 0.599609H0.571289V17.3996H23.4284V0.599609Z" stroke="black" stroke-width="2" stroke-miterlimit="8" stroke-linecap="square"/>
+                            <path d="M0.571289 0.599609L11.9999 11.3996L23.4284 0.599609" stroke="black" stroke-width="2" stroke-miterlimit="8" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_301_19">
+                            <rect width="24" height="18" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            span= span= GLOBALS.email.txt
+                .header__menu
+                    button(type='button' data-event='openMenu')
+                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6.5H18M6 11.5H18M0 1L18 1" stroke="black" stroke-width="2"/>
+                        </svg>

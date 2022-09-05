@@ -1,0 +1,18 @@
+.accept{
+  display: flex;
+  gap: 30px;
+
+  &__input{
+    width: 18px;
+    height: 18px;
+  }
+
+  &__content{
+    color: var(--color-text);
+    font-size: 12px;
+    a{
+      color: #29c1e7;
+      text-decoration: underline;
+    }
+  }
+}

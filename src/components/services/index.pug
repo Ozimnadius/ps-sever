@@ -1,0 +1,29 @@
+if slider
+    .services.swiper
+        .swiper-wrapper.services__grid
+            each i in GLOBALS.menu.services.items
+                a(href=i.href).services__item.swiper-slide
+                    span.services__link
+                        span= i.title
+                        <svg width="71" height="15" viewBox="0 0 71 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M70.7071 8.20711C71.0976 7.81658 71.0976 7.18342 70.7071 6.79289L64.3431 0.428932C63.9526 0.0384078 63.3195 0.0384078 62.9289 0.428932C62.5384 0.819457 62.5384 1.45262 62.9289 1.84315L68.5858 7.5L62.9289 13.1569C62.5384 13.5474 62.5384 14.1805 62.9289 14.5711C63.3195 14.9616 63.9526 14.9616 64.3431 14.5711L70.7071 8.20711ZM70 6.5H0V8.5H70V6.5Z" fill="black"/>
+                        </svg>
+                    span.services__img
+                        img(src=i.img alt=i.title)
+                    span.services__txt= i.desc
+        .services__pag
+else
+    .services
+        .services__grid
+            each i in GLOBALS.menu.services.items
+                a(href=i.href).services__item
+                    span.services__link
+                        span= i.title
+                        <svg width="71" height="15" viewBox="0 0 71 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M70.7071 8.20711C71.0976 7.81658 71.0976 7.18342 70.7071 6.79289L64.3431 0.428932C63.9526 0.0384078 63.3195 0.0384078 62.9289 0.428932C62.5384 0.819457 62.5384 1.45262 62.9289 1.84315L68.5858 7.5L62.9289 13.1569C62.5384 13.5474 62.5384 14.1805 62.9289 14.5711C63.3195 14.9616 63.9526 14.9616 64.3431 14.5711L70.7071 8.20711ZM70 6.5H0V8.5H70V6.5Z" fill="black"/>
+                        </svg>
+                    span.services__img
+                        img(src=i.img alt=i.title)
+                    span.services__txt= i.desc
+
+

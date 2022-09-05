@@ -1,0 +1,101 @@
+extends src/core/main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.page
+        //-MAIN-ABOUT
+        section.page__section
+            .container
+                include src/components/main-about/index
+        //-CREATORS-1
+        section.page__section.margin-bottom-100
+            .container
+                -
+                    var data = {
+                        type: 'type-1',
+                        list: [
+                            {
+                                category: 'Скульптуры/бюст',
+                                title: 'гареев <br> махмут Ахметович',
+                                txt: 'Бюст генерала армии',
+                                href: '/gallery/',
+                                img: {
+                                    desctop: '/images/content/creators/img2.png',
+                                    mobile: '/images/content/creators/img2-m.png'
+                                }
+                            },
+                            {
+                                category: 'Скульптуры/бюст',
+                                title: 'ковалев <br> николай дмитриевич',
+                                txt: 'Бюст генерала армии',
+                                href: '/gallery/',
+                                img: {
+                                    desctop: '/images/content/creators/img.png',
+                                    mobile: '/images/content/creators/img-m.png'
+                                }
+                            }
+                        ]
+                    };
+                include src/components/creators/index
+        //-SERVICES
+        section.page__section.margin-bottom-100
+            .container.margin-bottom-90
+                .page__title.title.dn-m наши услуги
+                .page__component
+                    - var slider = true
+                    include src/components/services/index
+        //-CREATORS-2
+        section.page__section.margin-bottom-100
+            .container
+                -
+                    var data = {
+                        type: 'type-2',
+                        list: [
+                            {
+                                category: 'Скульптуры',
+                                title: '“ДОРОГА <br> В БУДУЩЕЕ”',
+                                txt: 'Потрясающе метафоричная скульптура находится в парке Победы в Минске, Беларусь. Памятник состоит из трёх элементов, которые изображают довоенную жизнь, военное время и послевоенный период.',
+                                href: '/gallery/',
+                                img: {
+                                    desctop: '/images/content/creators/img3.jpg',
+                                    mobile: '/images/content/creators/img3.jpg'
+                                }
+                            },
+                            {
+                                category: 'Скульптуры/бюст',
+                                title: 'памятник князю <br> Гедимину',
+                                txt: 'В 1323 году Великий князь отдал приказ заложить здесь могучие каменные стены, чтобы преградить крестоносцам дорогу в центр земель Великого княжества Литовского. Спустя 694 года, в 2017 году, жители Лиды с большим воодушевлением восприняли идею установить в нашем городе памятник основателю Лиды. ',
+                                href: '/gallery/',
+                                img: {
+                                    desctop: '/images/content/creators/img4.jpg',
+                                    mobile: '/images/content/creators/img4.jpg'
+                                }
+                            }
+                        ]
+                    };
+                include src/components/creators/index
+        //-GALLERY
+        section.page__section
+            .container
+                -
+                    var data = {
+                        top: true,
+                        items: [
+                            {
+                                img: '/images/content/services/1.jpg'
+                            },
+                            {
+                                img: '/images/content/services/2.jpg'
+                            },
+                            {
+                                img: '/images/content/services/3.jpg'
+                            },
+                            {
+                                img: '/images/content/services/4.jpg'
+                            }
+                        ]
+                    };
+                include src/components/gallery/index
+

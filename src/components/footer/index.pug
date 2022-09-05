@@ -1,0 +1,36 @@
+- var menu = GLOBALS.menu
+footer.footer
+    .container
+        .footer__grid
+            .footer__left
+                .footer__logo
+                    a(href="/")
+                        img(src="/images/content/logo.png" alt="lorem")
+                .footer__copy © 2022 ПСС
+            .footer__right
+                .footer__cols
+                    .footer__col
+                        .footer__menu
+                            .footer__section
+                                a(href=menu.services.href)= menu.services.title
+                            each i in menu.services.items
+                                .footer__item
+                                    a(href=i.href)= i.title
+                    .footer__col
+                        .footer__menu
+                            .footer__section
+                                a(href=menu.gallery.href)= menu.gallery.title
+                            .footer__section
+                                a(href=menu.about.href)= menu.about.title
+                    .footer__col
+                        .footer__section
+                            a(href=menu.contacts.href)= menu.contacts.title
+                        .footer__contacts
+                            .footer__contact
+                                a(href=GLOBALS.tel.href)= GLOBALS.tel.txt
+                            .footer__contact
+                                a(href=GLOBALS.email.href)= GLOBALS.email.txt
+                            .footer__contact
+                                span 123007, г. Москва, <br> ул. Магистральная 5-я, <br> д. 20
+
+

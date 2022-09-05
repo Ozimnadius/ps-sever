@@ -1,0 +1,72 @@
+@function rem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fz($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@function lh($size1, $size2) {
+  $lh: $size2 / $size1;
+  @return $lh;
+}
+
+@mixin content() {
+  --mt: 1em;
+  --mb: 1em;
+
+  ul {
+    padding-left: 40px;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  @include headers;
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin-top: var(--mt);
+    margin-bottom: var(--mb);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h1, h2, h3, h4, h6 {
+    font-weight: 700;
+  }
+
+}
+
+@mixin headers() {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+}
+
+@mixin tr() {
+  transition: var(--transition);
+}

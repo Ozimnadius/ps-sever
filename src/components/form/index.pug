@@ -1,0 +1,20 @@
+form(action='/php/ajax.php' method='post' data-event='validate').form#call
+    .form__wrap
+        .form__top
+            .form__title Оставьте заявку
+            button(type='button' data-event='closeForm').form__close х
+        .form__bottom
+            .form__txt Оставьте Ваши данные <br> и мы свяжемся с Вами
+            .form__fields
+                .form__field
+                    input(type='text' name='name' placeholder='Ваше имя').input
+                .form__field
+                    input(type='tel'
+                        name='tel'
+                        required
+                        placeholder='Номер телефона').input
+                .form__field
+                    input(type='email' name='email' placeholder='Электронная почта').input
+            .form__accept
+                include ../accept/index
+            button(type='submit' disabled).form__submit Отправить
